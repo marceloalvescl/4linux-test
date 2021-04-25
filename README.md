@@ -2,7 +2,7 @@
 
 O presente repositório contém as implementações do backend e do frontend do projeto atribuído como teste prático.<br>
 <br>
-As linguagens utilizadas no projeto foram Python no backend e NodeJS no frontend. No banco foi utilizado PostgreSQL<br>
+As linguagens utilizadas no projeto foram Python no backend e JavaScript (NodeJS) no frontend. No banco foi utilizado PostgreSQL<br>
 <br>
 - Backend<br>
 <pre>
