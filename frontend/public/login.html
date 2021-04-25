@@ -11,12 +11,12 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Página de Login</title>
   </head>
   <body>
     <div class="sidenav">
-      <div class="login-main-text">
+      <div class="sidenav-main-text">
         <h2>
           4Linux<br />
           Página de Login
@@ -27,25 +27,19 @@
     <div class="main">
       <div class="col-md-6 col-sm-12">
         <div class="login-form">
-          <form id="loginForm" >
+          <form id="loginForm" method="POST" action="/process-login">
             <div class="form-group">
               <label>Usuário</label>
-              <input type="text" class="form-control" placeholder="Usuário" id="username" />
+              <input type="text" name="username" class="form-control" placeholder="Usuário" id="username" />
             </div>
             <div class="form-group">
               <label>Senha do Usuário</label>
-              <input type="password" class="form-control" placeholder="Senha do Usuário" id="password" />
+              <input type="password" name="password" class="form-control" placeholder="Senha do Usuário" id="password" />
             </div>
             <button type="submit" class="btn btn-black" id="loginBtn">Login</button>
           </form>
         </div>
       </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/login.js"></script>
   </body>
 </html>

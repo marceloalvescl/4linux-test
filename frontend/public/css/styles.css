@@ -14,6 +14,14 @@ body {
   padding-top: 20px;
 }
 
+.topnav {
+  top: 0%;
+  padding-top: 0px;
+  overflow-x: hidden;
+  height: 150px;
+  background-color: #000;
+}
+
 .main {
   padding: 0px 10px;
 }
@@ -48,9 +56,16 @@ body {
   }
 }
 
-.login-main-text {
+.sidenav-main-text {
   margin-top: 20%;
   padding: 60px;
+  color: #fff;
+}
+
+.topnav-main-text {
+  margin-top: 0%;
+  padding-left: 45px;
+  padding-top: 10px;
   color: #fff;
 }
 
@@ -62,4 +77,10 @@ body {
   margin-top: 15px;
   background-color: #000 !important;
   color: #fff;
+}
+
+.btn-white {
+  margin-top: 15px;
+  background-color: #fff !important;
+  color: #000;
 }
