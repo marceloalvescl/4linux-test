@@ -36,7 +36,7 @@ def login():
                             Account.password.like(password)
             ).first()
             if(user):
-                logger.info("Logando usário: " + user.username)
+                logger.info("Logando usuário: " + user.username)
                 login_user(user)
                 #return redirect(url_for('consume_public_apis_routes.index'), code=307)
                 response = '{"Sucesso": "Usuário logado"}'
@@ -46,8 +46,8 @@ def login():
                 return json.loads(response), 401
 
 @consume_public_apis_routes.route('/logout', methods=['GET', 'POST'])
-@login_required
 def logout():
+    logger.info("Deslogando usuário")
     logout_user()
     response = '{"Sucesso": "Logout realizado com sucesso"}'
     return json.loads(response), 201

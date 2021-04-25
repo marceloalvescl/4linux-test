@@ -62,18 +62,9 @@ server.post("/logoff", function(request, response, next) {
   fetch('http://127.0.0.1:81/logout', {
     method: 'POST',
   }).then(res => {
-    apiResponse = res.status;
-    setCookieHeader = res.headers.get('Set-Cookie')
-    return res.json();
+    console.log(res.status);
   }).then(json => {
     console.log(json);
-    if(apiResponse == 201){
-      console.log(setCookieHeader)
-      response.setHeader('Set-Cookie', setCookieHeader)
-      response.redirect(301, '/');
-    }else{
-      response.redirect('/login');
-    }
   })
   response.clearCookie('session');
   response.redirect('/login');
