@@ -27,7 +27,7 @@ As linguagens utilizadas no projeto foram Python no backend e NodeJS no frontend
       No frontend foi utilizado o framework Express do NodeJS para implementação da rota do frontend, onde cada uma realiza alguma atividade chave ou retorna um template.
       Para consumir a API (backend) foi utilizado o módulo 'node-fetch' para realizar as requisições necessárias.
       Utilizei a linguagem de template Embedded JavaScript templating (EJS) para gerar a tabela com as informações da PublicAPIs.
-      O frontend foi subdividido em cinco pastas: public e src.
+      O frontend foi subdividido em duas pastas: public e src.
         - public 
           Contém os templates home.ejs e login.html na raiz da pasta public e mais duas subpastas, sendo elas css e js, para prover os estilos e scripts necessários. Por conta do escopo reduzido do projeto, foi necessário apenas um arquivo de css para a aplicação.
         - src
