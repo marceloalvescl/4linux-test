@@ -1,5 +1,4 @@
 from app import app
-from flask_mail import Mail
 from utils.log import logger
 
 
