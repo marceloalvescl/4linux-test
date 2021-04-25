@@ -6,32 +6,32 @@ As linguagens utilizadas no projeto foram Python no backend e NodeJS no frontend
 <br>
 - Backend<br>
 <pre>
-      Ao analisar o desafio, defini que o framework Flask atenderia as necessidades e utilizei deste microframework para desenvolver a aplicação.
-      Flask Blueprint foi utilizado para melhor organização das rotas, visando manter as rotas e a lógica delas apenas em um arquivo.
-      O módulo Flask_Login foi utilizado para gerenciar a autenticação do usuário no backend, o qual provê mecanismos para logar o usuario, deslogá-lo, verificar se está logado e proibir acesso a rotas que necessitem de autenticação (anotação @login_required sobre a definição das rotas).
-      Com todo esse arcabouço, montei uma API para ser consumida pela aplicação do front-end, definindo as seguintes rotas possíveis: /login; /logout e / (rota raiz, onde após autenticação do usuário é feito uma requisição para a url https://api.publicapis.org/entries e então retornando um Json contendo as informações de apis públicas)
-      O Backend foi subdividido em cinco pastas: app, flask_session, models, routes e utils.
-       - app
-          Contém o arquivo __init__.py responsável instanciar a classe Flask e fazer as configurações necessárias.
-       - flask_session
-          Pasta auxiliar onde é armazenado informações de sessões dos usuários, mantendo um registro das sessões válidas e as inativas.
-       - models
-          Nesta há a classe Account, a qual modela a entidade account do banco Postgres. Esta classe é utilizada também para realizar a lógica de autenticação.
-       - routes
-          Neste subdiretório encontra-se routes.py, arquivo onde encontra-se as rotas da aplicação e toda a lógica dentro delas.
-       - utils
-          Pasta auxiliar onde encontra-se apenas log.py, o qual utiliza o módulo logging para realizar logs no console.
+Ao analisar o desafio, defini que o framework Flask atenderia as necessidades e utilizei deste microframework para desenvolver a aplicação.
+Flask Blueprint foi utilizado para melhor organização das rotas, visando manter as rotas e a lógica delas apenas em um arquivo.
+O módulo Flask_Login foi utilizado para gerenciar a autenticação do usuário no backend, o qual provê mecanismos para logar o usuario, deslogá-lo, verificar se está logado e proibir acesso a rotas que necessitem de autenticação (anotação @login_required sobre a definição das rotas).
+Com todo esse arcabouço, montei uma API para ser consumida pela aplicação do front-end, definindo as seguintes rotas possíveis: /login; /logout e / (rota raiz, onde após autenticação do usuário é feito uma requisição para a url https://api.publicapis.org/entries e então retornando um Json contendo as informações de apis públicas)
+O Backend foi subdividido em cinco pastas: app, flask_session, models, routes e utils.
+ - app
+    Contém o arquivo __init__.py responsável instanciar a classe Flask e fazer as configurações necessárias.
+ - flask_session
+    Pasta auxiliar onde é armazenado informações de sessões dos usuários, mantendo um registro das sessões válidas e as inativas.
+ - models
+    Nesta há a classe Account, a qual modela a entidade account do banco Postgres. Esta classe é utilizada também para realizar a lógica de autenticação.
+ - routes
+    Neste subdiretório encontra-se routes.py, arquivo onde encontra-se as rotas da aplicação e toda a lógica dentro delas.
+ - utils
+    Pasta auxiliar onde encontra-se apenas log.py, o qual utiliza o módulo logging para realizar logs no console.
 </pre>
 - Frontend<br>
 <pre>
-      No frontend foi utilizado o framework Express do NodeJS para implementação da rota do frontend, onde cada uma realiza alguma atividade chave ou retorna um template.
-      Para consumir a API (backend) foi utilizado o módulo 'node-fetch' para realizar as requisições necessárias.
-      Utilizei a linguagem de template Embedded JavaScript templating (EJS) para gerar a tabela com as informações da PublicAPIs.
-      O frontend foi subdividido em duas pastas: public e src.
-        - public 
-          Contém os templates home.ejs e login.html na raiz da pasta public e mais duas subpastas, sendo elas css e js, para prover os estilos e scripts necessários. Por conta do escopo reduzido do projeto, foi necessário apenas um arquivo de css para a aplicação.
-        - src
-          Nesta pasta econtra-se o arquivo server.js, onde há a instanciação do framework Express e a definição das rotas do frontend.
+No frontend foi utilizado o framework Express do NodeJS para implementação da rota do frontend, onde cada uma realiza alguma atividade chave ou retorna um template.
+Para consumir a API (backend) foi utilizado o módulo 'node-fetch' para realizar as requisições necessárias.
+Utilizei a linguagem de template Embedded JavaScript templating (EJS) para gerar a tabela com as informações da PublicAPIs.
+O frontend foi subdividido em duas pastas: public e src.
+  - public 
+    Contém os templates home.ejs e login.html na raiz da pasta public e mais duas subpastas, sendo elas css e js, para prover os estilos e scripts necessários. Por conta do escopo reduzido do projeto, foi necessário apenas um arquivo de css para a aplicação.
+  - src
+    Nesta pasta econtra-se o arquivo server.js, onde há a instanciação do framework Express e a definição das rotas do frontend.
 </pre>
 API do python
  ```
@@ -77,11 +77,11 @@ Frontend
     retorna Json informando logout realizado com sucesso e statuscode 201
  ```
 <pre>
-      Dificuldades encontradas:
-       - Neste fim de semana tive algumas atividades academicas e não tive condição de implementar algumas funcionalidades extras, como paginação na tabela das apis, logout apenas caso usuário esteja logado, entre outras.
-       - Ao tentar realizar chamadas para a api do backend via script na página de login (evento de click em botão de login realizaria um fetch),
-       me deparei com erro de CSP(Content-Security-Policy), o qual impedia chamadas a referências externas, não consegui desenvolver um
-       workaround e então optei por criar uma rota no frontend /process-login para consumir a rota /login do backend.
-       - Não havia utilizado o módulo Flask-Login anteriormente, passei um tempo lendo a documentação para aprender o básico sobre e percebi que há mais para aprofundar.
+Dificuldades encontradas:
+ - Neste fim de semana tive algumas atividades academicas e não tive condição de implementar algumas funcionalidades extras, como paginação na tabela das apis, logout apenas caso usuário esteja logado, entre outras.
+ - Ao tentar realizar chamadas para a api do backend via script na página de login (evento de click em botão de login realizaria um fetch),
+ me deparei com erro de CSP(Content-Security-Policy), o qual impedia chamadas a referências externas, não consegui desenvolver um
+ workaround e então optei por criar uma rota no frontend /process-login para consumir a rota /login do backend.
+ - Não havia utilizado o módulo Flask-Login anteriormente, passei um tempo lendo a documentação para aprender o básico sobre e percebi que há mais para aprofundar.
             
 </pre>      
