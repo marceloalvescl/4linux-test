@@ -79,8 +79,8 @@ Frontend
 <pre>
       Dificuldades encontradas:
        - Neste fim de semana tive algumas atividades academicas e não tive condição de implementar algumas funcionalidades extras, como paginação na tabela das apis, logout apenas caso usuário esteja logado, entre outras.
-       - Ao tentar realizar chamadas para a api do backend via script na página de login (evento de click em botão de login realizaria um fetch), <br>
-       me deparei com erro de CSP(Content-Security-Policy), o qual impedia chamadas a referências externas, não consegui desenvolver um <br>
+       - Ao tentar realizar chamadas para a api do backend via script na página de login (evento de click em botão de login realizaria um fetch),
+       me deparei com erro de CSP(Content-Security-Policy), o qual impedia chamadas a referências externas, não consegui desenvolver um
        workaround e então optei por criar uma rota no frontend /process-login para consumir a rota /login do backend.
        - Não havia utilizado o módulo Flask-Login anteriormente, passei um tempo lendo a documentação para aprender o básico sobre e percebi que há mais para aprofundar.
             
