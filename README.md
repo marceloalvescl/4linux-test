@@ -36,9 +36,9 @@ O Backend foi subdividido em cinco pastas: app, flask_session, models, routes e 
 </pre>
 - Frontend<br>
 <pre>
-No frontend foi utilizado o framework Express do NodeJS para implementação da rota do frontend, onde cada uma realiza 
-alguma atividade chave ou retorna um template.
-Para consumir a API (backend) foi utilizado o módulo 'node-fetch' para realizar as requisições necessárias.
+No frontend foi utilizado o framework Express do NodeJS para implementação da aplicação web do frontend, 
+definindo as rotas do frontend, onde cada uma realiza alguma atividade chave ou retorna um template.
+Para consumir a API (backend) foi utilizado o módulo 'node-fetch' para realizar as requisições quando necessárias.
 Utilizei a linguagem de template Embedded JavaScript templating (EJS) para gerar a tabela com as informações da PublicAPIs.
 O frontend foi subdividido em duas pastas: public e src.
   - public 
