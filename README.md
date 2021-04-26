@@ -47,7 +47,7 @@ O frontend foi subdividido em duas pastas: public e src.
   - src
     Nesta pasta econtra-se o arquivo server.js, onde há a instanciação do framework Express e a definição das rotas do frontend.
 </pre>
-API do python
+- Requisições Backend 
  ```
  http://127.0.0.1:81/; 
     método POST,
@@ -68,7 +68,7 @@ http://127.0.0.1:81/logout; método POST e GET
     (Aqui é feito logout_user() o qual inativa a sessão do usuário).
  ```
 
-Frontend
+- Requisições Frontend
  ```
  http://127.0.0.1:80/;
     método GET,
@@ -91,7 +91,7 @@ Frontend
     retorna Json informando logout realizado com sucesso e statuscode 201
  ```
 <pre>
-Dificuldades encontradas:
+- Dificuldades encontradas:
  - Neste fim de semana tive algumas atividades academicas e não tive condição de implementar algumas funcionalidades 
  extras, como paginação na tabela das apis, logout apenas caso usuário esteja logado, entre outras.
  
@@ -106,7 +106,7 @@ Dificuldades encontradas:
  - Tentei subir o projeto utilizando docker-compose porém não obtive sucesso...
 </pre>      
 
-Para rodar a aplicacao no localhost: <br>
+- Para rodar a aplicacao no localhost: <br>
 <pre>
 - Tenha este repositório em sua máquina (git clone ou fazendo o download),
 - Logo após, instale o Postgres em sua máquina e configure a senha do usuário postgres para root, 
