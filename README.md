@@ -18,17 +18,17 @@ logar o usuario, deslogá-lo, verificar se está logado e proibir acesso a rotas
 
 Com todo esse arcabouço, montei uma API para ser consumida pela aplicação do front-end, definindo as seguintes rotas 
 possíveis: /login; /logout e / (rota raiz, onde após autenticação do usuário é feito uma requisição 
-para a url https://api.publicapis.org/entries e então retornando um Json contendo as informações de apis públicas)
+para a url https://api.publicapis.org/entries e então retorna um Json contendo as informações de apis públicas)
 
 O Backend foi subdividido em cinco pastas: app, flask_session, models, routes e utils.
  - app
-    Contém o arquivo __init__.py responsável instanciar a classe Flask e fazer as configurações necessárias.
+    Contém o arquivo __init__.py responsável por instanciar a classe Flask e fazer as configurações necessárias.
  - flask_session
     Pasta auxiliar onde é armazenado informações de sessões dos usuários, mantendo um registro das sessões válidas 
     e as inativas.
  - models
     Nesta há a classe Account, a qual modela a entidade account do banco Postgres. Esta classe é utilizada também para
-    realizar a lógica de autenticação.
+    auxiliar na implementação da lógica de autenticação.
  - routes
     Neste subdiretório encontra-se routes.py, arquivo onde encontra-se as rotas da aplicação e toda a lógica dentro delas.
  - utils
