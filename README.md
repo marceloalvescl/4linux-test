@@ -1,6 +1,7 @@
 # 4linux-test
 
 O presente repositório contém as implementações do backend e do frontend do projeto atribuído como teste prático.<br>
+Ao final deste README, há uma seção que informa como rodar a aplicação no localhost.<br>
 <br>
 As linguagens utilizadas no projeto foram Python no backend e JavaScript (NodeJS) no frontend. No banco foi utilizado PostgreSQL<br>
 <br>
@@ -100,5 +101,21 @@ Dificuldades encontradas:
  para consumir fazer requisição a rota /login do backend.
  
  - Não havia utilizado o módulo Flask-Login anteriormente, passei um tempo lendo a documentação para aprender o básico 
- sobre e percebi que há mais para aprofundar.          
+ sobre e percebi que há mais para aprofundar.    
+ 
+ - Tentei subir o projeto utilizando docker-compose porém não obtive sucesso...
 </pre>      
+
+Para rodar a aplicacao no localhost: <br>
+<pre>
+- Tenha este repositório em sua máquina (git clone ou fazendo o download),
+- Logo após, instale o Postgres em sua máquina e configure a senha do usuário postgres para root, 
+ou então altere a senha configuarada em backend/app/__init__.py linha 7 
+(exemplo 'postgresql://postgres:<suaSenha>@localhost/test4linux')
+- Com o PostgreSQL rodando, execute os comandos no script presente na raiz do projeto SCRIPT-TEST4LINUX.sql 
+para criar o banco, a tabela e inserir o usuário 4linux (para tal pode utilizar o shell psql, como preferir)
+- Em seguida abra 2 terminais e navegue até cada uma das pastas: backend e frontend,
+  - No terminal onde esteja no diretório backend execute o comando - 'python3 main.py', 
+    se necessário - 'pip install -r requirements.txt'
+  - No terminal onde esteja no diretório frontend execute o comando - 'npm start', se necessário - 'npm install'
+</pre>
